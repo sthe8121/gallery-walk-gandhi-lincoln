@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entering the Gallery Walk: What President Lincoln's Face Masks and Hand Cast Reveals?</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="splash-screen" id="splash">
+    <h1>Entering the Gallery Walk:</h1>
+    <p>What President Lincoln's Face Masks and Hand Cast Reveals?</p>
+    <button onclick="startApp()">Enter Gallery</button>
+  </div>
+  <div class="app-wrapper" id="app">
+    <aside class="fixed-sidebar">
+      <nav>
+        <a href="#history">History</a>
+        <a href="#science">Science</a>
+        <a href="#chemistry">Chemistry</a>
+        <a href="#tech">Technology</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#math">Mathematics</a>
+        <a href="#english">English</a>
+      </nav>
+    </aside>
+    <main class="content" id="gallery-content">
+
+      <!-- History Section -->
+      <section id="history" class="gallery-section">
+        <h2>History</h2>
+        <iframe src="https://3d.si.edu/explorer/abraham-lincoln-volk-life-mask" width="100%" height="400"></iframe>
+        <button onclick="openAudio('https://npg.si.edu/al-tactile-installation-english')">Listen to Description</button>
+        <div class="quiz">
+          <p>Q: What does Lincoln’s face in 1865 suggest about his experience as a leader?</p>
+          <ul>
+            <li onclick="checkQuiz('history', 0)">A. Youth and confidence</li>
+            <li onclick="checkQuiz('history', 1)">B. Fatigue and wisdom</li>
+            <li onclick="checkQuiz('history', 2)">C. Indecision and fear</li>
+            <li onclick="checkQuiz('history', 3)">D. Joy and relief</li>
+          </ul>
+          <div id="history-feedback" class="feedback"></div>
+          <textarea id="history-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('history')">Save Reflection</button>
+          <button onclick="downloadReflection('history')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- Science Section -->
+      <section id="science" class="gallery-section">
+        <h2>Science</h2>
+        <model-viewer src="https://3d.nih.gov/api/model/3DPX-016801?file=glb" alt="Human Skull" camera-controls auto-rotate ar ar-modes="webxr quick-look" style="width:100%; height:400px;"></model-viewer>
+        <model-viewer src="https://3d.nih.gov/api/model/3DPX-017249?file=glb" alt="Human Hand Bones" camera-controls auto-rotate ar ar-modes="webxr quick-look" style="width:100%; height:400px;"></model-viewer>
+        <div class="quiz">
+          <p>Q: Which bone forms the forehead part of the skull?</p>
+          <ul>
+            <li onclick="checkQuiz('science', 0)">A. Frontal bone</li>
+            <li onclick="checkQuiz('science', 1)">B. Parietal bone</li>
+            <li onclick="checkQuiz('science', 2)">C. Temporal bone</li>
+            <li onclick="checkQuiz('science', 3)">D. Occipital bone</li>
+          </ul>
+          <div id="science-feedback" class="feedback"></div>
+          <textarea id="science-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('science')">Save Reflection</button>
+          <button onclick="downloadReflection('science')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- Chemistry Section -->
+      <section id="chemistry" class="gallery-section">
+        <h2>Chemistry</h2>
+        <iframe src="https://sketchfab.com/o.-o/collections/plaster-cast-05c13034ed55422383bd0f32957c65d3/embed" width="100%" height="400"></iframe>
+        <div class="quiz">
+          <p>Q: What is the main component of 19th-century plaster?</p>
+          <ul>
+            <li onclick="checkQuiz('chemistry', 0)">A. Calcium carbonate</li>
+            <li onclick="checkQuiz('chemistry', 1)">B. Gypsum (calcium sulfate)</li>
+            <li onclick="checkQuiz('chemistry', 2)">C. Silicon dioxide</li>
+            <li onclick="checkQuiz('chemistry', 3)">D. Calcium oxide</li>
+          </ul>
+          <div id="chemistry-feedback" class="feedback"></div>
+          <textarea id="chemistry-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('chemistry')">Save Reflection</button>
+          <button onclick="downloadReflection('chemistry')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- Technology Section -->
+      <section id="tech" class="gallery-section">
+        <h2>Technology & Computer Science</h2>
+        <a href="https://www.artec3d.com/learning-center/structured-light-3d-scanning" target="_blank">Learn about Structured Light Scanning</a><br>
+        <iframe src="https://www.youtube.com/embed/Ydo7RXDl7MM" width="100%" height="400"></iframe>
+        <div class="quiz">
+          <p>Q: Structured light scanning uses which principle?</p>
+          <ul>
+            <li onclick="checkQuiz('tech', 0)">A. Triangulation</li>
+            <li onclick="checkQuiz('tech', 1)">B. Reflection</li>
+            <li onclick="checkQuiz('tech', 2)">C. Magnetic resonance</li>
+            <li onclick="checkQuiz('tech', 3)">D. X-ray</li>
+          </ul>
+          <div id="tech-feedback" class="feedback"></div>
+          <textarea id="tech-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('tech')">Save Reflection</button>
+          <button onclick="downloadReflection('tech')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- Engineering Section -->
+      <section id="engineering" class="gallery-section">
+        <h2>Engineering</h2>
+        <a href="https://www.nature.com/articles/s40494-023-01102-3" target="_blank">Digital Artifact Repair Case Study</a><br>
+        <iframe src="https://planner5d.com/gallery/floorplans/LGaSTZ/floorplans-3d" width="100%" height="400"></iframe>
+        <div class="quiz">
+          <p>Q: Digital reconstruction often uses what technique to fill missing geometry?</p>
+          <ul>
+            <li onclick="checkQuiz('engineering', 0)">A. Boolean subtraction</li>
+            <li onclick="checkQuiz('engineering', 1)">B. Mesh smoothing</li>
+            <li onclick="checkQuiz('engineering', 2)">C. Hole filling algorithms</li>
+            <li onclick="checkQuiz('engineering', 3)">D. Texture baking</li>
+          </ul>
+          <div id="engineering-feedback" class="feedback"></div>
+          <textarea id="engineering-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('engineering')">Save Reflection</button>
+          <button onclick="downloadReflection('engineering')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- Mathematics Section -->
+      <section id="math" class="gallery-section">
+        <h2>Mathematics</h2>
+        <a href="https://support.canvasgfx.com/portal/en/kb/articles/scaling-measuring-3d-models" target="_blank">Scaling Techniques Guide</a><br>
+        <a href="https://www.meshy.ai/tags/symmetry" target="_blank">Symmetry Models Collection</a>
+        <div class="quiz">
+          <p>Q: If a model is scaled to 150% of its original size, the scale factor is?</p>
+          <ul>
+            <li onclick="checkQuiz('math', 0)">A. 0.5</li>
+            <li onclick="checkQuiz('math', 1)">B. 1.5</li>
+            <li onclick="checkQuiz('math', 2)">C. 150</li>
+            <li onclick="checkQuiz('math', 3)">D. 15</li>
+          </ul>
+          <div id="math-feedback" class="feedback"></div>
+          <textarea id="math-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('math')">Save Reflection</button>
+          <button onclick="downloadReflection('math')">Download Reflection</button>
+        </div>
+      </section>
+
+      <!-- English Section -->
+      <section id="english" class="gallery-section">
+        <h2>English</h2>
+        <p>Read the transcript on the <a href="https://npg.si.edu/al-tactile-installation-english" target="_blank">NPG site</a>.</p>
+        <div class="quiz">
+          <p>Q: Which question asks students to list four things learned?</p>
+          <ul>
+            <li onclick="checkQuiz('english', 0)">A. Q1</li>
+            <li onclick="checkQuiz('english', 1)">B. Q2</li>
+            <li onclick="checkQuiz('english', 2)">C. Q3</li>
+            <li onclick="checkQuiz('english', 3)">D. Q4</li>
+          </ul>
+          <div id="english-feedback" class="feedback"></div>
+          <textarea id="english-reflection" placeholder="Why did you choose your answer?"></textarea><br>
+          <button onclick="saveReflection('english')">Save Reflection</button>
+          <button onclick="downloadReflection('english')">Download Reflection</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
